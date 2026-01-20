@@ -223,7 +223,13 @@ local render = function(image)
       }
     else
       -- for normal windows, we call screenpos
-      screen_pos = vim.fn.screenpos(image.window, math.max(1, original_y), original_x + 1)
+
+      -- screenpos uses 1-based for lines, and byte-based for "columns"
+      local line = original_y + 1
+      local image_line = vim.api.nvim_buf_get_lines(image.buffer, original_y, original_y + 1, true)[1]
+      local col_byte = vim.fn.byteidx(image_line, original_x + 1)
+
+      screen_pos = vim.fn.screenpos(image.window, line, col_byte)
     end
 
     if
