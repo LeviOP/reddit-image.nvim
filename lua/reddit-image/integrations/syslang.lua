@@ -1,4 +1,4 @@
-local document = require("image/utils/document")
+local document = require("reddit-image/utils/document")
 
 return document.create_document_integration({
   name = "syslang",

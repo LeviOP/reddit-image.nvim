@@ -1,5 +1,5 @@
-local utils = require("image/utils")
-local log = require("image/utils/logger").within("backend.sixel")
+local utils = require("reddit-image/utils")
+local log = require("reddit-image/utils/logger").within("backend.sixel")
 
 local MAX_CACHE_SIZE = 50
 local FLUSH_DELAY_MS = 50

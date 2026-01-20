@@ -1,4 +1,4 @@
-local document = require("image/utils/document")
+local document = require("reddit-image/utils/document")
 local has_neorg = nil
 
 ---Resolve workspace notation `$<workspace>/` with neorg if possible

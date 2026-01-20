@@ -1,5 +1,5 @@
 local bit = require("bit")
-local magic = require("image/utils/magic")
+local magic = require("reddit-image/utils/magic")
 
 local M = {}
 

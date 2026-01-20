@@ -1,7 +1,7 @@
-local utils = require("image/utils")
-local processors = require("image/processors")
-local report = require("image/report")
-local logger = require("image/utils/logger")
+local utils = require("reddit-image/utils")
+local processors = require("reddit-image/processors")
+local report = require("reddit-image/report")
+local logger = require("reddit-image/utils/logger")
 local log = logger.within("core")
 
 ---@type Options
@@ -84,7 +84,7 @@ api.setup = function(options)
 
   vim.schedule(function()
     if opts.processor == "magick_rock" then
-      local magick = require("image/magick")
+      local magick = require("reddit-image/magick")
       -- check that magick is available
       if not magick.has_magick then
         vim.api.nvim_err_writeln(
@@ -100,7 +100,7 @@ api.setup = function(options)
   state.processor = processors.get_processor(opts.processor)
 
   -- load backend
-  local backend = require("image/backends/" .. opts.backend)
+  local backend = require("reddit-image/backends/" .. opts.backend)
   if type(backend.setup) == "function" then backend.setup(state) end
   state.backend = backend
 
@@ -510,7 +510,7 @@ end
 ---@param options? ImageOptions
 api.from_file = function(path, options)
   guard_setup()
-  local image = require("image/image")
+  local image = require("reddit-image/image")
   return image.from_file(path, options, state)
 end
 
@@ -519,7 +519,7 @@ end
 ---@param callback fun(image: Image|nil)
 api.from_url = function(url, options, callback)
   guard_setup()
-  local image = require("image/image")
+  local image = require("reddit-image/image")
   image.from_url(url, options, callback, state)
 end
 

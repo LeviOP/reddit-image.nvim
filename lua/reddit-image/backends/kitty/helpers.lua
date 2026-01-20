@@ -1,6 +1,6 @@
-local codes = require("image/backends/kitty/codes")
-local utils = require("image/utils")
-local log = require("image/utils/logger").within("backend.kitty")
+local codes = require("reddit-image/backends/kitty/codes")
+local utils = require("reddit-image/utils")
+local log = require("reddit-image/utils/logger").within("backend.kitty")
 
 local uv = vim.uv
 -- Allow for loop to be used on older versions

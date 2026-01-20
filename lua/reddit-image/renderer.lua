@@ -1,5 +1,5 @@
-local utils = require("image/utils")
-local log = require("image/utils/logger").within("renderer")
+local utils = require("reddit-image/utils")
+local log = require("reddit-image/utils/logger").within("renderer")
 
 -- Images get resized and cropped to fit in the context they are rendered in.
 -- Each of these versions are written to the temp directory and cleared on reboot (on Linux at least).

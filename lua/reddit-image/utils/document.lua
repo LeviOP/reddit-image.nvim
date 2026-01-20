@@ -1,6 +1,6 @@
 ---@diagnostic disable: duplicate-doc-field
-local utils = require("image/utils")
-local logger = require("image/utils/logger")
+local utils = require("reddit-image/utils")
+local logger = require("reddit-image/utils/logger")
 
 local popup_window = nil
 

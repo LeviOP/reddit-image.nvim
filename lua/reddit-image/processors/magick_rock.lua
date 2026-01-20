@@ -1,4 +1,4 @@
-local utils = require("image/utils")
+local utils = require("reddit-image/utils")
 local has_magick, magick = pcall(require, "magick")
 
 local function guard()

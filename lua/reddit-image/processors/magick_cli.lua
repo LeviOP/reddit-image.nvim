@@ -1,4 +1,4 @@
-local utils = require("image/utils")
+local utils = require("reddit-image/utils")
 
 local has_magick = vim.fn.executable("magick") == 1
 local has_convert = vim.fn.executable("convert") == 1

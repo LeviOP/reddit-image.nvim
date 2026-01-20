@@ -1,5 +1,5 @@
-local magick_rock = require("image/processors/magick_rock")
-local magick_cli = require("image/processors/magick_cli")
+local magick_rock = require("reddit-image/processors/magick_rock")
+local magick_cli = require("reddit-image/processors/magick_cli")
 
 ---@type table<string, ImageProcessor>
 local processors = {

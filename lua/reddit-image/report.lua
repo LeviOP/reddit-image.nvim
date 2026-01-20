@@ -1,4 +1,4 @@
-local utils = require("image/utils")
+local utils = require("reddit-image/utils")
 
 ---@param state State
 local function create_report(state)

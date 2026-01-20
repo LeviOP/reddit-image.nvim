@@ -1,4 +1,4 @@
-local offsets = require("image/utils/offsets")
+local offsets = require("reddit-image/utils/offsets")
 
 ---@param opts { normal: boolean, floating: boolean, with_masks: boolean, ignore_masking_filetypes: string[] }
 ---@return Window[]
