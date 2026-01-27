@@ -17,16 +17,16 @@ local default_options = {
   },
   integrations = {
     markdown = {
-      enabled = true,
+      enabled = false,
     },
     typst = {
-      enabled = true,
+      enabled = false,
     },
     neorg = {
-      enabled = true,
+      enabled = false,
     },
     syslang = {
-      enabled = true,
+      enabled = false,
     },
     html = {
       enabled = false,
@@ -49,7 +49,7 @@ local default_options = {
   editor_only_render_when_focused = false,
   tmux_show_only_in_active_window = false,
   ignore_download_error = false,
-  hijack_file_patterns = { "*.png", "*.jpg", "*.jpeg", "*.gif", "*.webp", "*.avif" },
+  hijack_file_patterns = {},
 }
 
 ---@type State
